@@ -1,0 +1,49 @@
+{
+  "name": "strapi5-ftp-provider",
+  "author": "Dmytro Gural",
+  "version": "1.0.0",
+  "description": "Strapi v5 upload provider for storing files on an FTP / FTPS server",
+  "main": "dist/provider.js",
+  "types": "dist/provider.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "strapi-provider",
+    "upload",
+    "ftp",
+    "ftps",
+    "provider"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/dmytro-gural/strapi5-ftp-provider",
+  "homepage": "https://github.com/dmytro-gural/strapi5-ftp-provider#readme",
+  "bugs": {
+    "url": "https://github.com/dmytro-gural/strapi5-ftp-provider/issues"
+  },
+  "strapi": {
+    "kind": "provider",
+    "name": "ftp",
+    "displayName": "FTP / FTPS",
+    "description": "Upload files to an FTP or FTPS server"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "basic-ftp": "^5.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

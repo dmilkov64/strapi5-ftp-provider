@@ -18,10 +18,10 @@
     "provider"
   ],
   "license": "MIT",
-  "repository": "https://github.com/dmytro-gural/strapi5-ftp-provider",
-  "homepage": "https://github.com/dmytro-gural/strapi5-ftp-provider#readme",
+  "repository": "https://github.com/DmytroGural/strapi5-ftp-provider",
+  "homepage": "https://github.com/DmytroGural/strapi5-ftp-provider#readme",
   "bugs": {
-    "url": "https://github.com/dmytro-gural/strapi5-ftp-provider/issues"
+    "url": "https://github.com/DmytroGural/strapi5-ftp-provider/issues"
   },
   "strapi": {
     "kind": "provider",

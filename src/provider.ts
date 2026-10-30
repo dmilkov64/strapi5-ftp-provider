@@ -205,9 +205,15 @@ const provider = {
                         ...Object.values(file.formats ?? {}),
                     ];
 
-                    await Promise.allSettled(
-                        targets.map((t) => client.remove(getFilename(t))),
-                    );
+                    for (const t of targets) {
+                        try {
+                            await client.remove(getFilename(t));
+                        } catch (err) {
+                            if (!isFtpError(err, 550)) {
+                                throw err;
+                            }
+                        }
+                    }
 
                     await pruneEmptyDirectories(client);
                 } catch (err: unknown) {
